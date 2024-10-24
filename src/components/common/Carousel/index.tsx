@@ -2,6 +2,7 @@
 import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
+import { product } from "@/data/data";
 
 const slides = [
   {

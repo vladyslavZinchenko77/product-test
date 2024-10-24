@@ -3,6 +3,7 @@ import { FC } from "react";
 import SizeGrid from "@/components/common/SizeGrid";
 import CustomBtn from "@/components/common/CustomBtn";
 import ColorSelect from "@/components/common/ColorSelect";
+import { product } from "@/data/data";
 
 const ProductSettings: FC = () => {
   const addToCart = (id: number) => {
