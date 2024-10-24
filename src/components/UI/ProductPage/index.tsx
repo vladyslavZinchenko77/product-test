@@ -1,39 +1,58 @@
-import { FC } from "react";
+"use client";
+import { FC, useState } from "react";
 import Image from "next/image";
 import ProductSettings from "./ProductSettings";
 import ProductDesc from "./ProductDesc";
 import Carousel from "@/components/common/Carousel";
+import { product } from "@/data/data";
 
 const ProductPage: FC = () => {
+  const [selectedColor, setSelectedColor] = useState<string | undefined>(
+    "green"
+  );
+
   return (
     <>
-      <div className="w-full flex justify-center">
-        <div className="w-[50%]  sm:w-full  md:w-full lg:w-[70%] xl:w-[50%]">
-          <div className="flex justify-center">
-            <div className="flex items-start gap-[24px] sm:flex-col  sm:w-full md:flex-row md:w-full lg:flex-row lg:w-full ">
-              <div className="w-[535px] h-[668px]  sm:w-full h-auto xl:max-w-[480px]">
-                <Image
-                  src={"/img/jordan/green/jordan_green_1.jpg"}
-                  alt="Green Jordans"
-                  layout="responsive"
-                  width={762}
-                  height={951}
-                />
-              </div>
-              <div className="w-[50%]  sm:w-full xl:max-w-[480px]">
-                <ProductSettings />
+      {product.map((item) => (
+        <div key={item.id} className="w-full flex justify-center">
+          <div className="w-[50%] sm:w-full md:w-full lg:w-[70%] xl:w-[50%]">
+            <div className="flex justify-center">
+              <div className="flex items-start gap-6 sm:flex-col sm:w-full md:flex-row md:w-full lg:flex-row lg:w-full">
+                <div className="w-[535px] sm:w-full xl:max-w-[480px]">
+                  <Image
+                    src="/img/jordan/green/jordan_green_1.jpg"
+                    alt="Green Jordans"
+                    width={762}
+                    height={951}
+                    layout="responsive"
+                    priority
+                  />
+                </div>
+                <div className="w-1/2 sm:w-full xl:max-w-[480px]">
+                  <ProductSettings
+                    title={item.title}
+                    category={item.category}
+                    price={item.price}
+                    selectedColor={selectedColor}
+                    setSelectedColor={setSelectedColor}
+                    sizes={item.sizes}
+                  />
+                </div>
               </div>
             </div>
+
+            <ProductDesc descriptionText={item.description} className="mt-6" />
+
+            <h2 className="mt-6 uppercase text-xl font-bold">
+              More images of the product:
+            </h2>
+
+            <div className="mt-3">
+              <Carousel slides={item.images.green} />
+            </div>
           </div>
-          <ProductDesc className="mt-[24px]" />
         </div>
-      </div>
-      <h2 className="mt-[24px] upercase font-xl font-bold">
-        More images of the product:
-      </h2>
-      <div className="mt-[12px]">
-        <Carousel />
-      </div>
+      ))}
     </>
   );
 };
