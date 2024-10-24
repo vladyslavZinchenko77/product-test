@@ -1,8 +1,8 @@
-# Overview
+### Overview
 
 This project is a product page built with Next.js and TypeScript, styled using Tailwind CSS. It leverages Radix UI components to create a clean and functional user interface. The page includes core product features like a product image carousel, size and color selection, and "Add to Cart" functionality.
 
-# Key Technologies:
+### Key Technologies:
 
 - Next.js: Framework for building the page and managing routing.
 - TypeScript: Provides static type-checking to ensure code reliability.
