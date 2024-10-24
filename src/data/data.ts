@@ -4,6 +4,11 @@ export const product = [
     title: "Jumpman MVP",
     category: "Men's Shoes",
     price: 150.99,
+    coverImg: {
+      green: "/img/jordan/green/jordan_green_1.jpg",
+      blue: "/img/jordan/blue/jordan_blue_1.jpg",
+    },
+
     sizes: [
       { size: "EU 40" },
       { size: "EU 40.5" },
@@ -61,6 +66,43 @@ export const product = [
         {
           id: 7,
           image: "/img/jordan/green/jordan_green_7.jpg",
+          title: "Slide 7",
+        },
+      ],
+      blue: [
+        {
+          id: 1,
+          image: "/img/jordan/blue/jordan_blue_1.jpg",
+          title: "Slide 1",
+        },
+        {
+          id: 2,
+          image: "/img/jordan/blue/jordan_blue_2.jpg",
+          title: "Slide 2",
+        },
+        {
+          id: 3,
+          image: "/img/jordan/blue/jordan_blue_3.jpg",
+          title: "Slide 3",
+        },
+        {
+          id: 4,
+          image: "/img/jordan/blue/jordan_blue_4.jpg",
+          title: "Slide 4",
+        },
+        {
+          id: 5,
+          image: "/img/jordan/blue/jordan_blue_5.jpg",
+          title: "Slide 5",
+        },
+        {
+          id: 6,
+          image: "/img/jordan/blue/jordan_blue_6.jpg",
+          title: "Slide 6",
+        },
+        {
+          id: 7,
+          image: "/img/jordan/blue/jordan_blue_7.jpg",
           title: "Slide 7",
         },
       ],
