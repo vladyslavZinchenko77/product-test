@@ -2,6 +2,7 @@
 import { FC } from "react";
 import SizeGrid from "@/components/common/SizeGrid";
 import CustomBtn from "@/components/common/CustomBtn";
+import ColorSelect from "@/components/common/ColorSelect";
 
 const ProductSettings: FC = () => {
   const addToCart = (id: number) => {
@@ -15,7 +16,7 @@ const ProductSettings: FC = () => {
         <h4 className="text-gray-500">Men's Shoes</h4>
         <p className="font-bold">$150.99</p>
       </div>
-      <div>COLOR SELECT</div>
+      <ColorSelect />
       <SizeGrid />
       <div className="flex flex-col space-y-3">
         <CustomBtn
