@@ -1,18 +1,21 @@
 import { FC } from "react";
 import * as Select from "@radix-ui/react-select";
 import { Check, ChevronDown } from "lucide-react";
-import { useState } from "react";
+
+interface ColorSelectProps {
+  selectedColor: string | undefined;
+  setSelectedColor: (color: string) => void;
+}
 
 const colors = [
   { value: "blue", label: "blue", bgClass: "bg-blue-500" },
   { value: "green", label: "green", bgClass: "bg-green-500" },
 ];
 
-const ColorSelect: FC = () => {
-  const [selectedColor, setSelectedColor] = useState<string | undefined>(
-    "green"
-  );
-
+const ColorSelect: FC<ColorSelectProps> = ({
+  selectedColor,
+  setSelectedColor,
+}) => {
   const handleValueChange = (value: string) => {
     setSelectedColor(value);
   };

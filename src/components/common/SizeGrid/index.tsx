@@ -1,12 +1,15 @@
 import { FC } from "react";
 import SizeItem from "../SizeItem";
 
-const SizeGrid: FC = () => {
+interface SizeGridProps {
+  sizes: { size: string }[];
+}
+const SizeGrid: FC<SizeGridProps> = ({ sizes }) => {
   return (
-    <div className="grid grid-cols-4 gap-[8px] ">
-      <SizeItem /> <SizeItem /> <SizeItem /> <SizeItem /> <SizeItem />
-      <SizeItem /> <SizeItem /> <SizeItem /> <SizeItem /> <SizeItem />
-      <SizeItem /> <SizeItem /> <SizeItem /> <SizeItem /> <SizeItem />
+    <div className="grid grid-cols-4 gap-2 ">
+      {sizes.map((size) => (
+        <SizeItem key={size.size} size={size.size} />
+      ))}
     </div>
   );
 };
