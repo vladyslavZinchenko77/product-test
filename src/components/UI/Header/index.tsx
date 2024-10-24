@@ -7,7 +7,7 @@ const Header: FC = () => {
   return (
     <header className="p-[12px] mb-[24px] flex justify-between items-center">
       <Logo />
-      <div>
+      <div className="flex sm:hidden md:flex">
         <Link
           className="pl-[12px] font-bold hover:text-gray-500 duration-300"
           href={"#"}
