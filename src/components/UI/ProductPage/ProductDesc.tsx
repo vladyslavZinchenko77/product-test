@@ -6,7 +6,7 @@ interface ProductDescProps {
 
 const ProductDesc: FC<ProductDescProps> = ({ className }) => {
   return (
-    <div className={className}>
+    <div className={`text-center ${className}`}>
       <p>
         We didn't invent the remix—but considering the material we get to
         sample, this one's a no-brainer. We took elements from the AJ6, 7 and 8,
