@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 const Footer: FC = () => {
   return (
-    <footer className="p-[12px] mt-[24px] flex flex-col lg:flex-row lg:justify-between lg:items-center text-center lg:text-left">
+    <footer className="p-[12px] my-[24px] flex flex-col lg:flex-row lg:justify-between lg:items-center text-center lg:text-left">
       <p className="mb-4 lg:mb-0">© 2024 Nike, Inc. All rights reserved</p>
       <nav className="flex flex-wrap justify-center lg:justify-start">
         {[
