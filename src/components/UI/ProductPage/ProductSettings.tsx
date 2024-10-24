@@ -3,6 +3,7 @@ import { FC } from "react";
 import SizeGrid from "@/components/common/SizeGrid";
 import CustomBtn from "@/components/common/CustomBtn";
 import ColorSelect from "@/components/common/ColorSelect";
+import { product } from "@/data/data";
 
 const ProductSettings: FC = () => {
   const addToCart = (id: number) => {
@@ -10,8 +11,8 @@ const ProductSettings: FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-between h-full space-y-6">
-      <div className="space-y-2">
+    <div className="flex flex-col justify-between h-full space-y-4">
+      <div className="">
         <h2 className="font-semibold text-xl">Jumpman MVP</h2>
         <h4 className="text-gray-500">Men's Shoes</h4>
         <p className="font-bold">$150.99</p>
